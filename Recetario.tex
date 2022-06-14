@@ -1,0 +1,57 @@
+\documentclass[10pt,a4paper]{report}
+% Paquetes usados
+\usepackage[utf8]{inputenc}
+\usepackage{xcookybooky}
+\usepackage[english, spanish]{babel}
+\usepackage[bookmarks = true, colorlinks=true, linkcolor = black, citecolor = black, menucolor = black, urlcolor = blue]{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {pix/} }
+\selectlanguage{spanish}
+% Configura xcookybooky
+\setHeadlines{
+    inghead = Ingredientes,
+    prephead = Preparación,
+    hinthead = Tips
+}
+
+% Título
+\title{Recopilación De Recetas Familiares}
+\author{El Happy}
+
+\begin{document}
+
+\maketitle
+\newpage
+\tableofcontents
+
+% Recetas
+\chapter*{Cremas o Salsas}
+\addcontentsline{toc}{chapter}{Cremas O Salsas}
+\input{src/crema-rocoto.tex}
+\input{src/salsa-asado.tex}
+
+\chapter*{Platos principales}
+\addcontentsline{toc}{chapter}{Platos Principales}
+\input{src/asado-cacerola.tex}
+\input{src/costillar-horno.tex}
+\input{src/ensalada-sunomomo.tex}
+\input{src/lentejas.tex}
+\input{src/zapallos-rellenos.tex}
+
+% Postres
+\chapter*{Postres}
+\addcontentsline{toc}{chapter}{Postres}
+\input{src/almibar-canela.tex}
+\input{src/bizcocho.tex}
+\input{src/panqueques.tex}
+
+% Tragos
+\chapter*{Tragos Y Cócteles}
+\addcontentsline{toc}{chapter}{Tragos Y Cócteles}
+
+%Café
+\chapter*{Café}
+\addcontentsline{toc}{chapter}{Café}
+\input{src/cafe-irlandes.tex}
+
+\end{document}
