@@ -34,6 +34,21 @@
 \title{Recopilación De Recetas Familiares}
 \author{El Happy}
 
+% Imagen de fondo de Borrador
+\usepackage{eso-pic} % imagen de fondo
+\newcommand\imgFondo{%
+   \put(0,0){%
+     \parbox[b][\paperheight]{\paperwidth}{%
+       \vfill
+       \centering
+       \includegraphics[width=\paperwidth,height=\paperheight,%
+       keepaspectratio]{borrador}%
+       \vfill
+		}
+	}
+}
+
+% Inicio del documento
 \begin{document}
 %----------------------------------------------------------------------------------------
 %	Portada
@@ -55,6 +70,8 @@
 %----------------------------------------------------------------------------------------
 
 \newpage
+% Imagen de fondo de borrador
+\AddToShipoutPicture{\imgFondo}
 ~\vfill
 \thispagestyle{empty}
 
@@ -73,6 +90,10 @@
 \newpage
 \tableofcontents
 \newpage
+
+%----------------------------------------------------------------------------------------
+%	Introducción
+%----------------------------------------------------------------------------------------
 
 \chapter*{Introducción}
 \input{src/introduccion.tex}
