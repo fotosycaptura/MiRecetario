@@ -1,12 +1,28 @@
 \documentclass[10pt,a4paper]{report}
-% Paquetes usados
+% Paquetes
 \usepackage[utf8]{inputenc}
+% Para cocina
 \usepackage{xcookybooky}
+% Idioma
 \usepackage[english, spanish]{babel}
+% Indice, o urls
 \usepackage[bookmarks = true, colorlinks=true, linkcolor = black, citecolor = black, menucolor = black, urlcolor = blue]{hyperref}
+% Paquetes de imagenes
 \usepackage{graphicx}
+\usepackage{wrapfig}
+% Ruta de imágenes
 \graphicspath{ {pix/} }
+% Lenguaje
 \selectlanguage{spanish}
+% Interlineado
+\usepackage{setspace}
+% Para paginaciones
+\usepackage{fancyhdr}
+% Limpia cabecera y pie de página
+\fancyhead{}
+\fancyfoot{}
+% Setea número hacia el lado derecho del pie de página
+\fancyfoot[R]{\thepage}
 % Configura xcookybooky
 \setHeadlines{
     inghead = Ingredientes,
@@ -35,22 +51,20 @@
 \endgroup
 
 %----------------------------------------------------------------------------------------
-%	Dedicatoria
+%	Dedicatoria, Derechos de autor... 
 %----------------------------------------------------------------------------------------
 
 \newpage
 ~\vfill
 \thispagestyle{empty}
 
-%\noindent Copyright \copyright\ 2014 Andrea Hidalgo\\ % Copyright notice
-
 \noindent \textsc{Una tarde de invierno, al lado de una chimenea...}\\
 
 \noindent \textsc{https://www.fotosycaptura.cl}\\ % URL
 
-\noindent Es uno de los mejores lugares para recordar y rememorar algunas vivencias o contar algún tipo de historia a los más pequeños...\\ % License information
+\noindent Es uno de los mejores lugares para recordar y rememorar algunas vivencias o contar algún tipo de historia a los más pequeños...\\ 
 
-\noindent \textit{Primer y quizás único libro, Junio 2022} % Printing/edition date
+\noindent \textit{Primer y quizás único libro, Junio 2022}
 
 %----------------------------------------------------------------------------------------
 %	Indice General
@@ -58,17 +72,27 @@
 
 \newpage
 \tableofcontents
+\newpage
+
+\chapter*{Introducción}
+\input{src/introduccion.tex}
+
+\newpage
+\singlespacing 
+% Se setean encabecados de página
+\lhead{Recopilación De Recetas Familiares}
+\rhead{El Happy}
 
 %----------------------------------------------------------------------------------------
 %	Recetas
 %----------------------------------------------------------------------------------------
-
 
 % Recetas
 \chapter*{Cremas o Salsas}
 \addcontentsline{toc}{chapter}{Cremas O Salsas}
 \input{src/crema-rocoto.tex}
 \input{src/salsa-asado.tex}
+
 
 \chapter*{Platos principales}
 \addcontentsline{toc}{chapter}{Platos Principales}
