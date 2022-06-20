@@ -35,18 +35,18 @@
 \author{El Happy}
 
 % Imagen de fondo de Borrador
-\usepackage{eso-pic} % imagen de fondo
-\newcommand\imgFondo{%
-   \put(0,0){%
-     \parbox[b][\paperheight]{\paperwidth}{%
-       \vfill
-       \centering
-       \includegraphics[width=\paperwidth,height=\paperheight,%
-       keepaspectratio]{borrador}%
-       \vfill
-		}
-	}
-}
+%\usepackage{eso-pic} % imagen de fondo
+%\newcommand\imgFondo{%
+%   \put(0,0){%
+%     \parbox[b][\paperheight]{\paperwidth}{%
+%       \vfill
+%       \centering
+%       \includegraphics[width=\paperwidth,height=\paperheight,%
+%       keepaspectratio]{borrador}%
+%       \vfill
+%		}
+%	}
+%}
 
 % Inicio del documento
 \begin{document}
@@ -71,17 +71,11 @@
 
 \newpage
 % Imagen de fondo de borrador
-\AddToShipoutPicture{\imgFondo}
+%\AddToShipoutPicture{\imgFondo}
 ~\vfill
 \thispagestyle{empty}
 
-\noindent \textsc{Una tarde de invierno, al lado de una chimenea...}\\
-
-\noindent \textsc{https://www.fotosycaptura.cl}\\ % URL
-
-\noindent Es uno de los mejores lugares para recordar y rememorar algunas vivencias o contar algún tipo de historia a los más pequeños...\\ 
-
-\noindent \textit{Primer y quizás único libro, Junio 2022}
+\input{src/dedicatoria.tex}
 
 %----------------------------------------------------------------------------------------
 %	Indice General
