@@ -7,6 +7,12 @@
 \usepackage[english, spanish]{babel}
 % Indice, o urls
 \usepackage[bookmarks = true, colorlinks=true, linkcolor = black, citecolor = black, menucolor = black, urlcolor = blue]{hyperref}
+\hypersetup{
+pdftitle={Recopilación de Recetas Familiares},
+pdfsubject={El Happy},
+pdfauthor={El Happy},
+pdfkeywords={recetas, cocina}
+}
 % Paquetes de imagenes
 \usepackage{graphicx}
 \usepackage{wrapfig}
@@ -105,25 +111,25 @@
 % Recetas
 \chapter*{Cremas o Salsas}
 \addcontentsline{toc}{chapter}{Cremas O Salsas}
-\input{src/crema-rocoto.tex}
-\input{src/salsa-asado.tex}
-
+\input{src/salsas/crema-rocoto.tex}
+\input{src/salsas/pebre.tex}
+\input{src/salsas/salsa-asado.tex}
 
 \chapter*{Platos principales}
 \addcontentsline{toc}{chapter}{Platos Principales}
-\input{src/asado-cacerola.tex}
-\input{src/costillar-horno.tex}
-\input{src/ensalada-sunomono.tex}
-\input{src/lentejas.tex}
-\input{src/pizza-casera.tex}
-\input{src/zapallos-rellenos.tex}
+\input{src/main/asado-cacerola.tex}
+\input{src/main/costillar-horno.tex}
+\input{src/main/ensalada-sunomono.tex}
+\input{src/main/lentejas.tex}
+\input{src/main/pizza-casera.tex}
+\input{src/main/zapallos-rellenos.tex}
 
 % Postres
 \chapter*{Postres}
 \addcontentsline{toc}{chapter}{Postres}
-\input{src/almibar-canela.tex}
-\input{src/bizcocho.tex}
-\input{src/panqueques.tex}
+\input{src/postres/almibar-canela.tex}
+\input{src/postres/bizcocho.tex}
+\input{src/postres/panqueques.tex}
 
 % Tragos
 \chapter*{Tragos Y Cócteles}
@@ -132,6 +138,7 @@
 %Café
 \chapter*{Café}
 \addcontentsline{toc}{chapter}{Café}
-\input{src/cafes.tex}
+\input{src/cafe/cafes.tex}
+\input{src/cafe/cafe-irlandes.tex}
 
 \end{document}
