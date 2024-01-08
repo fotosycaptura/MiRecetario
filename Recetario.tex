@@ -7,10 +7,15 @@
 \usepackage[english, spanish]{babel}
 % Indice, o urls
 \usepackage[bookmarks = true, colorlinks=true, linkcolor = black, citecolor = black, menucolor = black, urlcolor = blue]{hyperref}
+
+% Título
+\newcommand{\titulo}{Recopilación De Recetas}
+\newcommand{\yo}{Ex Xavi Salvaje}
+
 \hypersetup{
-pdftitle={Recopilación de Recetas Familiares},
-pdfsubject={El Happy},
-pdfauthor={El Happy},
+pdftitle={\titulo},
+pdfsubject={\yo},
+pdfauthor={\yo},
 pdfkeywords={recetas, cocina}
 }
 % Paquetes de imagenes
@@ -36,9 +41,10 @@ pdfkeywords={recetas, cocina}
     hinthead = Tips
 }
 
-% Título
-\title{Recopilación De Recetas Familiares}
-\author{El Happy}
+
+
+\title{\titulo}
+\author{\yo}
 
 % Imagen de fondo de Borrador
 %\usepackage{eso-pic} % imagen de fondo
@@ -66,9 +72,9 @@ pdfkeywords={recetas, cocina}
 \centering
 \vspace*{5cm}
 \par\normalfont\fontsize{35}{35}\sffamily\selectfont
-{\LARGE Recopilación De Recetas Familiares}\par % Book title
+{\LARGE \titulo}\par % Book title
 \vspace*{1cm}
-{\Huge El Happy}\par % Author name
+{\Huge \yo}\par % Author name
 \endgroup
 
 %----------------------------------------------------------------------------------------
@@ -101,8 +107,8 @@ pdfkeywords={recetas, cocina}
 \newpage
 \singlespacing 
 % Se setean encabecados de página
-\lhead{Recopilación De Recetas Familiares}
-\rhead{El Happy}
+\lhead{\title}
+\rhead{\author}
 
 %----------------------------------------------------------------------------------------
 %	Recetas
@@ -114,6 +120,7 @@ pdfkeywords={recetas, cocina}
 \input{src/salsas/crema-rocoto.tex}
 \input{src/salsas/pebre.tex}
 \input{src/salsas/salsa-asado.tex}
+\input{src/salsas/salsa-carne-pimienta.tex}
 
 \chapter*{Platos principales}
 \addcontentsline{toc}{chapter}{Platos Principales}
