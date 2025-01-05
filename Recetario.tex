@@ -12,10 +12,26 @@
 \newcommand{\titulo}{Recopilación De Recetas}
 \newcommand{\yo}{Ex Xavi Salvaje}
 
+% *** COLOR ***
+\usepackage[table]{xcolor}
+\definecolor{azul}{RGB}{0,160,255}
+\definecolor{azul2}{RGB}{7,74,163}
+\definecolor{azul3}{RGB}{0,89,140}
+\definecolor{alizarin}{rgb}{0.82, 0.1, 0.26}
+\definecolor{gray}{RGB}{242,242,242}
+\definecolor{grayblack}{RGB}{50,50,50}
+
+
+\usepackage{hyperref}
 \hypersetup{
 pdftitle={\titulo},
 pdfsubject={\yo},
 pdfauthor={\yo},
+colorlinks=true, 
+linkcolor=azul, 
+citecolor=cyan, 
+urlcolor=azul, 
+linktocpage,
 pdfkeywords={recetas, cocina}
 }
 % Paquetes de imagenes
@@ -134,6 +150,7 @@ pdfkeywords={recetas, cocina}
 \input{src/main/pollo-curry.tex}
 \input{src/main/reineta-horno.tex}
 \input{src/main/zapallos-rellenos.tex}
+\input{src/main/fritos-atun.tex}
 
 % Postres
 \chapter*{Postres}
