@@ -1,176 +1,82 @@
 \documentclass[10pt,a4paper]{report}
 % Paquetes
-\usepackage[utf8]{inputenc}
-% Para cocina
-\usepackage{xcookybooky}
-% Idioma
-\usepackage[english, spanish]{babel}
-% Indice, o urls
-\usepackage[bookmarks = true, colorlinks=true, linkcolor = black, citecolor = black, menucolor = black, urlcolor = blue]{hyperref}
+\input{Settings/paquetes}
 
-% Título
-\newcommand{\titulo}{Recopilación De Recetas}
-\newcommand{\yo}{Ex Xavi Salvaje}
-
-% *** COLOR ***
-\usepackage[table]{xcolor}
-\definecolor{azul}{RGB}{0,160,255}
-\definecolor{azul2}{RGB}{7,74,163}
-\definecolor{azul3}{RGB}{0,89,140}
-\definecolor{alizarin}{rgb}{0.82, 0.1, 0.26}
-\definecolor{gray}{RGB}{242,242,242}
-\definecolor{grayblack}{RGB}{50,50,50}
-
-
-\usepackage{hyperref}
-\hypersetup{
-pdftitle={\titulo},
-pdfsubject={\yo},
-pdfauthor={\yo},
-colorlinks=true, 
-linkcolor=azul, 
-citecolor=cyan, 
-urlcolor=azul, 
-linktocpage,
-pdfkeywords={recetas, cocina}
-}
-% Paquetes de imagenes
-\usepackage{graphicx}
-\usepackage{wrapfig}
-% Ruta de imágenes
-\graphicspath{ {pix/} }
-% Lenguaje
-\selectlanguage{spanish}
-% Interlineado
-\usepackage{setspace}
-% Para paginaciones
-\usepackage{fancyhdr}
-% Limpia cabecera y pie de página
-\fancyhead{}
-\fancyfoot{}
-% Setea número hacia el lado derecho del pie de página
-\fancyfoot[R]{\thepage}
-% Configura xcookybooky
-\setHeadlines{
-    inghead = Ingredientes,
-    prephead = Preparación,
-    hinthead = Tips
-}
-
-
-
-\title{\titulo}
-\author{\yo}
-
-% Imagen de fondo de Borrador
-%\usepackage{eso-pic} % imagen de fondo
-%\newcommand\imgFondo{%
-%   \put(0,0){%
-%     \parbox[b][\paperheight]{\paperwidth}{%
-%       \vfill
-%       \centering
-%       \includegraphics[width=\paperwidth,height=\paperheight,%
-%       keepaspectratio]{borrador}%
-%       \vfill
-%		}
-%	}
-%}
 
 % Inicio del documento
 \begin{document}
-%----------------------------------------------------------------------------------------
-%	Portada
-%----------------------------------------------------------------------------------------
+	
+	\input{src/00_portada}
+	\clearpage
+	
+	\input{src/dedicatoria.tex}
 
-\begingroup
-\thispagestyle{empty}
-\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=1]{fuego}}} % Image background
-\centering
-\vspace*{5cm}
-\par\normalfont\fontsize{35}{35}\sffamily\selectfont
-{\LARGE \titulo}\par % Book title
-\vspace*{1cm}
-{\Huge \yo}\par % Author name
-\endgroup
+	%-------------------------------------------------------------------------------------
+	%	Indice General
+	%-------------------------------------------------------------------------------------
 
-%----------------------------------------------------------------------------------------
-%	Dedicatoria, Derechos de autor... 
-%----------------------------------------------------------------------------------------
+	\clearpage
+	\tableofcontents
+	\clearpage
 
-\newpage
-% Imagen de fondo de borrador
-%\AddToShipoutPicture{\imgFondo}
-~\vfill
-\thispagestyle{empty}
+	%-------------------------------------------------------------------------------------
+	%	Introducción
+	%-------------------------------------------------------------------------------------
 
-\input{src/dedicatoria.tex}
+	\chapter*{Introducción}
+	\input{src/introduccion.tex}
 
-%----------------------------------------------------------------------------------------
-%	Indice General
-%----------------------------------------------------------------------------------------
+	\clearpage
+	\singlespacing 
+	% Se setean encabecados de página
+	\lhead{\title}
+	\rhead{\author}
 
-\newpage
-\tableofcontents
-\newpage
-
-%----------------------------------------------------------------------------------------
-%	Introducción
-%----------------------------------------------------------------------------------------
-
-\chapter*{Introducción}
-\input{src/introduccion.tex}
-
-\newpage
-\singlespacing 
-% Se setean encabecados de página
-\lhead{\title}
-\rhead{\author}
-
-%----------------------------------------------------------------------------------------
-%	Recetas
-%----------------------------------------------------------------------------------------
-
-% Recetas
-\chapter*{Cremas o Salsas}
-\addcontentsline{toc}{chapter}{Cremas O Salsas}
-\input{src/salsas/crema-rocoto.tex}
-\input{src/salsas/pebre.tex}
-\input{src/salsas/salsa-asado.tex}
-\input{src/salsas/salsa-carne-pimienta.tex}
-
-\chapter*{Platos principales}
-\addcontentsline{toc}{chapter}{Platos Principales}
-\input{src/main/alcafhocas.tex}
-\input{src/main/asado-cacerola.tex}
-\input{src/main/bruselas.tex}
-\input{src/main/costillar-horno.tex}
-\input{src/main/ensalada-sunomono.tex}
-\input{src/main/lentejas.tex}
-\input{src/main/pizza-casera.tex}
-\input{src/main/pollo-curry.tex}
-\input{src/main/reineta-horno.tex}
-\input{src/main/zapallos-rellenos.tex}
-\input{src/main/fritos-atun.tex}
-
-% Postres
-\chapter*{Postres}
-\addcontentsline{toc}{chapter}{Postres}
-\input{src/postres/almibar-canela.tex}
-\input{src/postres/bizcocho.tex}
-\input{src/postres/panqueques.tex}
-
-% Tragos
-\chapter*{Tragos Y Cócteles}
-\addcontentsline{toc}{chapter}{Tragos Y Cócteles}
-\input{src/coctel/pisco-sour.tex}
-\input{src/coctel/terremoto.tex}
-\input{src/coctel/mojito.tex}
-%Café
-\chapter*{Café}
-\addcontentsline{toc}{chapter}{Café}
-\input{src/cafe/cafes.tex}
-\input{src/cafe/cafe-irlandes.tex}
-\chapter*{Otros}
-\addcontentsline{toc}{chapter}{Otros}
-\input{src/otros/sopaipillas.tex}
+	%-------------------------------------------------------------------------------------
+	%	Recetas
+	%-------------------------------------------------------------------------------------
+	
+	% Recetas
+	\chapter*{Cremas o Salsas}
+	\addcontentsline{toc}{chapter}{Cremas O Salsas}
+	\input{src/salsas/crema-rocoto.tex}
+	\input{src/salsas/pebre.tex}
+	\input{src/salsas/salsa-asado.tex}
+	\input{src/salsas/salsa-carne-pimienta.tex}
+	
+	\chapter*{Platos principales}
+	\addcontentsline{toc}{chapter}{Platos Principales}
+	\input{src/main/alcafhocas.tex}
+	\input{src/main/asado-cacerola.tex}
+	\input{src/main/bruselas.tex}
+	\input{src/main/costillar-horno.tex}
+	\input{src/main/ensalada-sunomono.tex}
+	\input{src/main/lentejas.tex}
+	\input{src/main/pizza-casera.tex}
+	\input{src/main/pollo-curry.tex}
+	\input{src/main/reineta-horno.tex}
+	\input{src/main/zapallos-rellenos.tex}
+	\input{src/main/fritos-atun.tex}
+	
+	% Postres
+	\chapter*{Postres}
+	\addcontentsline{toc}{chapter}{Postres}
+	\input{src/postres/almibar-canela.tex}
+	\input{src/postres/bizcocho.tex}
+	\input{src/postres/panqueques.tex}
+	
+	% Tragos
+	\chapter*{Tragos Y Cócteles}
+	\addcontentsline{toc}{chapter}{Tragos Y Cócteles}
+	\input{src/coctel/pisco-sour.tex}
+	\input{src/coctel/terremoto.tex}
+	\input{src/coctel/mojito.tex}
+	%Café
+	\chapter*{Café}
+	\addcontentsline{toc}{chapter}{Café}
+	\input{src/cafe/cafes.tex}
+	\input{src/cafe/cafe-irlandes.tex}
+	\chapter*{Otros}
+	\addcontentsline{toc}{chapter}{Otros}
+	\input{src/otros/sopaipillas.tex}
 \end{document}
