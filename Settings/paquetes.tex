@@ -1,0 +1,59 @@
+\usepackage[utf8]{inputenc}
+% Para cocina
+\usepackage{xcookybooky}
+% Idioma
+\usepackage[english, spanish]{babel}
+% Indice, o urls
+\usepackage[bookmarks = true, colorlinks=true, linkcolor = black, citecolor = black, menucolor = black, urlcolor = blue]{hyperref}
+
+% Título
+\newcommand{\titulo}{Recopilación De Recetas}
+\newcommand{\yo}{Ex Xavi Salvaje}
+
+% *** COLOR ***
+\usepackage[table]{xcolor}
+\definecolor{azul}{RGB}{0,160,255}
+\definecolor{azul2}{RGB}{7,74,163}
+\definecolor{azul3}{RGB}{0,89,140}
+\definecolor{alizarin}{rgb}{0.82, 0.1, 0.26}
+\definecolor{gray}{RGB}{242,242,242}
+\definecolor{grayblack}{RGB}{50,50,50}
+
+
+\usepackage{hyperref}
+\hypersetup{
+	pdftitle={\titulo},
+	pdfsubject={\yo},
+	pdfauthor={\yo},
+	colorlinks=true, 
+	linkcolor=azul, 
+	citecolor=cyan, 
+	urlcolor=azul, 
+	linktocpage,
+	pdfkeywords={recetas, cocina}
+}
+% Paquetes de imagenes
+\usepackage{graphicx}
+\usepackage{wrapfig}
+% Ruta de imágenes
+\graphicspath{ {pix/} }
+% Lenguaje
+\selectlanguage{spanish}
+% Interlineado
+\usepackage{setspace}
+% Para paginaciones
+\usepackage{fancyhdr}
+% Limpia cabecera y pie de página
+\fancyhead{}
+\fancyfoot{}
+% Setea número hacia el lado derecho del pie de página
+\fancyfoot[R]{\thepage}
+% Configura xcookybooky
+\setHeadlines{
+	inghead = Ingredientes,
+	prephead = Preparación,
+	hinthead = Tips
+}
+
+\title{\titulo}
+\author{\yo}
